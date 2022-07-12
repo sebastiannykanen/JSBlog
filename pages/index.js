@@ -1,7 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/styles.module.css";
 import { GraphQLClient, gql } from "graphql-request";
 import BlogCard from "./components/BlogCard";
+import Categories from "./components/Categories";
 
 const graphcms = new GraphQLClient(
   "https://api-eu-central-1.graphcms.com/v2/cl3wv4w54h7rp01z61synewo1/master"
@@ -17,8 +18,11 @@ const QUERY = gql`
       content {
         html
       }
-      author {
+      categories {
         id
+        name
+      }
+      author {
         name
         avatar {
           url
@@ -34,6 +38,7 @@ export async function getStaticProps() {
     props: {
       posts,
     },
+    revalidate: 10,
   };
 }
 
@@ -49,7 +54,7 @@ export default function Home({ posts }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className={styles.posts}>
         <div>
           {posts.map((post) => (
             <BlogCard
@@ -59,7 +64,13 @@ export default function Home({ posts }) {
               datePublished={post.datePublished}
               slug={post.slug}
               content={post.content}
+              categories={post.categories}
             />
+          ))}
+        </div>
+        <div>
+          {posts.map((posts) => (
+            <Categories categories={posts.categories} key={posts.id} />
           ))}
         </div>
       </main>

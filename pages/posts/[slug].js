@@ -22,6 +22,10 @@ const QUERY = gql`
           url
         }
       }
+      categories {
+        id
+        name
+      }
     }
   }
 `;
@@ -57,7 +61,7 @@ export default function BlogPost({ post }) {
   return (
     <main>
       <div>{post.title}</div>
-      <div>{post.content.html}</div>
+      <div dangerouslySetInnerHTML={{ __html: post.content.html }}></div>
     </main>
   );
 }
