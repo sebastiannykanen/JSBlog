@@ -5,3 +5,15 @@
 posts.title {
   font-size: 5rem;
 }
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+}
+
+.flexItem {
+  background-color: gold;
+  border: 1px solid black;
+}

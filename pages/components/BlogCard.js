@@ -14,8 +14,8 @@ export default function BlogCard({
         <div>
           <h2>{title}</h2>
           <div dangerouslySetInnerHTML={{ __html: content.html }}></div>
-          <h3>{author.name}</h3>
-          <h3>{categories.name}</h3>
+          <h5>{author.name}</h5>
+          <h4>{categories.map((categories) => categories.name)}</h4>
         </div>
       </Link>
     </div>

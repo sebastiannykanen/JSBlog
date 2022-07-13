@@ -55,6 +55,11 @@ export default function Home({ posts }) {
       </Head>
 
       <main className={styles.posts}>
+        <div className={styles.categories}>
+          {posts.map((categories) => (
+            <Categories categories={categories.categories} />
+          ))}
+        </div>
         <div>
           {posts.map((post) => (
             <BlogCard
@@ -66,11 +71,6 @@ export default function Home({ posts }) {
               content={post.content}
               categories={post.categories}
             />
-          ))}
-        </div>
-        <div>
-          {posts.map((posts) => (
-            <Categories categories={posts.categories} key={posts.id} />
           ))}
         </div>
       </main>
