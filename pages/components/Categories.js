@@ -1,10 +1,10 @@
 import styles from "../../styles/styles.module.css";
 
-export default function Categories({ categories }) {
+export default function Categories({ title }) {
   return (
     <div>
       <div className={styles.flexItem}>
-        <h2>{categories.map((categories) => categories.name)}</h2>
+        <h2>{title}</h2>
       </div>
     </div>
   );

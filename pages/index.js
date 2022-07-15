@@ -18,7 +18,7 @@ const QUERY = gql`
       content {
         html
       }
-      categories {
+      categories(orderBy: name_ASC) {
         id
         name
       }
@@ -29,20 +29,24 @@ const QUERY = gql`
         }
       }
     }
+    categories {
+      name
+    }
   }
 `;
 
 export async function getStaticProps() {
-  const { posts } = await graphcms.request(QUERY);
+  const { posts, categories } = await graphcms.request(QUERY);
   return {
     props: {
       posts,
+      categories,
     },
     revalidate: 10,
   };
 }
 
-export default function Home({ posts }) {
+export default function Home({ posts, categories }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -56,8 +60,8 @@ export default function Home({ posts }) {
 
       <main className={styles.posts}>
         <div className={styles.categories}>
-          {posts.map((categories) => (
-            <Categories categories={categories.categories} />
+          {categories.map((cat) => (
+            <Categories title={cat.name} />
           ))}
         </div>
         <div>

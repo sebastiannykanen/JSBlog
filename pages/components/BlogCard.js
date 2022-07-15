@@ -8,6 +8,7 @@ export default function BlogCard({
   content,
   categories,
 }) {
+  console.log(categories);
   return (
     <div>
       <Link href={"/posts/" + slug}>
@@ -15,7 +16,6 @@ export default function BlogCard({
           <h2>{title}</h2>
           <div dangerouslySetInnerHTML={{ __html: content.html }}></div>
           <h5>{author.name}</h5>
-          <h4>{categories.map((categories) => categories.name)}</h4>
         </div>
       </Link>
     </div>
