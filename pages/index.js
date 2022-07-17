@@ -58,13 +58,21 @@ export default function Home({ posts, categories }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.posts}>
+      <main className={styles.mainDiv}>
+        <div className={styles.extraDiv}>
+          <h2>Hi this is extra</h2>
+          <h2>Hi this is extra</h2>
+          <h2>Hi this is extra</h2>
+          <h2>Hi this is extra</h2>
+          <h2>Hi this is extra</h2>
+          <h2>Hi this is extra</h2>
+        </div>
         <div className={styles.categories}>
           {categories.map((cat) => (
             <Categories title={cat.name} />
           ))}
         </div>
-        <div>
+        <div className={styles.posts}>
           {posts.map((post) => (
             <BlogCard
               title={post.title}
