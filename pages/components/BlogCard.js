@@ -8,7 +8,6 @@ export default function BlogCard({
   content,
   categories,
 }) {
-  console.log(categories);
   return (
     <div>
       <Link href={"/posts/" + slug}>

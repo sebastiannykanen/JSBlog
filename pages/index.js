@@ -31,6 +31,7 @@ const QUERY = gql`
     }
     categories {
       name
+      id
     }
   }
 `;
@@ -42,7 +43,6 @@ export async function getStaticProps() {
       posts,
       categories,
     },
-    revalidate: 10,
   };
 }
 
@@ -69,7 +69,7 @@ export default function Home({ posts, categories }) {
         </div>
         <div className={styles.categories}>
           {categories.map((cat) => (
-            <Categories title={cat.name} />
+            <Categories title={cat.name} key={cat.id} />
           ))}
         </div>
         <div className={styles.posts}>
