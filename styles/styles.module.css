@@ -16,15 +16,16 @@ posts.title {
 
 .categories {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   gap: 50px;
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: silver;
+  background-color: red;
   width: 100%;
 }
 
 .flexItem {
+  display: flex;
+  background-color: green;
 }

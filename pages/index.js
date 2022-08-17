@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/styles.module.css";
 import { GraphQLClient, gql } from "graphql-request";
+import { useState } from "react";
 import BlogCard from "./components/BlogCard";
 import Categories from "./components/Categories";
 
@@ -47,6 +48,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts, categories }) {
+  const [selectedCategory, setSelectedCategory] = useState("");
+
   return (
     <div className={styles.container}>
       <Head>
@@ -68,9 +71,10 @@ export default function Home({ posts, categories }) {
           <h2>Hi this is extra</h2>
         </div>
         <div className={styles.categories}>
-          {categories.map((cat) => (
-            <Categories title={cat.name} key={cat.id} />
-          ))}
+          <Categories
+            categories={categories}
+            setSelectedCategory={setSelectedCategory}
+          />
         </div>
         <div className={styles.posts}>
           {posts.map((post) => (
