@@ -7,18 +7,17 @@ export default function Categories({ categories, setSelectedCategory }) {
   }
 
   return (
-    <div>
-      <div>
-        {categories.map((category) => (
+    <div className={styles.categories}>
+      {categories.map((category) => (
+        <div className={styles.flexItem}>
           <h2
             key={category.id}
-            className={styles.flexItem}
             onClick={() => handleCategoryChange(category.name)}
           >
             {category.name}
           </h2>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }

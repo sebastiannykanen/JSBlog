@@ -70,12 +70,10 @@ export default function Home({ posts, categories }) {
           <h2>Hi this is extra</h2>
           <h2>Hi this is extra</h2>
         </div>
-        <div className={styles.categories}>
-          <Categories
-            categories={categories}
-            setSelectedCategory={setSelectedCategory}
-          />
-        </div>
+        <Categories
+          categories={categories}
+          setSelectedCategory={setSelectedCategory}
+        />
         <div className={styles.posts}>
           {posts.map((post) => (
             <BlogCard
