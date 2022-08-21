@@ -1,5 +1,6 @@
 import styles from "../../styles/Slug.module.css";
 import { GraphQLClient, gql } from "graphql-request";
+import Categories from "../components/Categories";
 
 const graphcms = new GraphQLClient(
   "https://api-eu-central-1.graphcms.com/v2/cl3wv4w54h7rp01z61synewo1/master"
@@ -59,8 +60,16 @@ export async function getStaticProps({ params }) {
 
 export default function BlogPost({ post }) {
   return (
-    <main>
-      <div>{post.title}</div>
+    <main className={styles.mainDiv}>
+      <div className={styles.extraDiv}>
+        <h2>Hi this is extra</h2>
+        <h2>Hi this is extra</h2>
+        <h2>Hi this is extra</h2>
+        <h2>Hi this is extra</h2>
+        <h2>Hi this is extra</h2>
+        <h2>Hi this is extra</h2>
+      </div>
+      <div className={styles.slugDiv}>{post.title}</div>
       <div dangerouslySetInnerHTML={{ __html: post.content.html }}></div>
     </main>
   );

@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Albert Sans", sans-serif;
-  background-color: silver;
+  font-family: "Aboreto", cursive;
+  background-color: rgb(217, 217, 217);
 }
 
 a {
@@ -21,8 +21,4 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-}
-
-h4 {
-  color: green;
 }

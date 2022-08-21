@@ -6,6 +6,11 @@
   align-items: center;
 }
 
+.pageTitle {
+  margin: 100px 0 30px 0;
+  font-size: 4rem;
+}
+
 posts.title {
   font-size: 5rem;
 }
@@ -22,12 +27,12 @@ posts.title {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: red;
+  background-color: rgb(217, 217, 217);
   width: 100%;
 }
 
 .flexItem {
   display: flex;
-  background-color: green;
+  font-size: 1rem;
   margin: 20px 0;
 }

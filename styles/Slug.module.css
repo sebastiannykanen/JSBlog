@@ -1,0 +1,11 @@
+.mainDiv {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slugDiv {
+  margin-top: 50px;
+}

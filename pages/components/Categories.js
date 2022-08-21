@@ -10,12 +10,12 @@ export default function Categories({ categories, setSelectedCategory }) {
     <div className={styles.categories}>
       {categories.map((category) => (
         <div className={styles.flexItem}>
-          <h2
+          <h4
             key={category.id}
             onClick={() => handleCategoryChange(category.name)}
           >
             {category.name}
-          </h2>
+          </h4>
         </div>
       ))}
     </div>
