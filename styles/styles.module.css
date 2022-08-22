@@ -29,10 +29,15 @@ posts.title {
   z-index: 1;
   background-color: rgb(217, 217, 217);
   width: 100%;
+  border-bottom: 1px solid black;
 }
 
 .flexItem {
   display: flex;
   font-size: 1rem;
-  margin: 20px 0;
+  margin: 15px 0;
+}
+
+.pug {
+  margin-top: 40px;
 }

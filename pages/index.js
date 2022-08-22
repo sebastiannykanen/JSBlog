@@ -4,6 +4,8 @@ import { GraphQLClient, gql } from "graphql-request";
 import { useState } from "react";
 import BlogCard from "./components/BlogCard";
 import Categories from "./components/Categories";
+import Image from "next/image";
+import HeaderPic from "../public/matthew-henry-2Ts5HnA67k8-unsplash.jpg";
 
 const graphcms = new GraphQLClient(
   "https://api-eu-central-1.graphcms.com/v2/cl3wv4w54h7rp01z61synewo1/master"
@@ -61,7 +63,7 @@ export default function Home({ posts, categories }) {
         <link rel="icon" href="/favicon.ico" />
         <style>
           @import
-          url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+          url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
         </style>
       </Head>
 
@@ -73,7 +75,14 @@ export default function Home({ posts, categories }) {
           categories={categories}
           setSelectedCategory={setSelectedCategory}
         />
-        <img src="../public/matthew-henry-2Ts5HnA67k8-unsplash.jpg" />
+        <div className={styles.pug}>
+          <Image
+            src={HeaderPic}
+            alt="Picture of pug"
+            width="500px"
+            height="400px"
+          />
+        </div>
         <div className={styles.posts}>
           {posts.map((post) => (
             <BlogCard
