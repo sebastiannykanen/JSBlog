@@ -51,6 +51,7 @@ export async function getStaticProps() {
 
 export default function Home({ posts, categories }) {
   const [selectedCategory, setSelectedCategory] = useState("");
+  console.log(posts);
 
   return (
     <div className={styles.container}>
@@ -84,17 +85,23 @@ export default function Home({ posts, categories }) {
           />
         </div>
         <div className={styles.posts}>
-          {posts.map((post) => (
-            <BlogCard
-              title={post.title}
-              key={post.id}
-              author={post.author}
-              datePublished={post.datePublished}
-              slug={post.slug}
-              content={post.content}
-              categories={post.categories}
-            />
-          ))}
+          {posts
+            .filter((post) =>
+              post.categories
+                .map((category) => category.name)
+                .includes(selectedCategory)
+            )
+            .map((post) => (
+              <BlogCard
+                title={post.title}
+                key={post.id}
+                author={post.author}
+                datePublished={post.datePublished}
+                slug={post.slug}
+                content={post.content}
+                categories={post.categories}
+              />
+            ))}
         </div>
       </main>
     </div>
