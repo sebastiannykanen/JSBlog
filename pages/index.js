@@ -51,6 +51,7 @@ export async function getStaticProps() {
 
 export default function Home({ posts, categories }) {
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [toggled, setToggled] = useState(false);
   console.log(posts);
 
   return (
@@ -75,6 +76,7 @@ export default function Home({ posts, categories }) {
         <Categories
           categories={categories}
           setSelectedCategory={setSelectedCategory}
+          setToggled={setToggled}
         />
         <div className={styles.pug}>
           <Image
