@@ -23,6 +23,15 @@ h2 {
   font-size: 1.5rem;
 }
 
+h4 {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+h4[test="yes"] {
+  background-color: blue;
+}
+
 h4:hover {
   cursor: pointer;
 }

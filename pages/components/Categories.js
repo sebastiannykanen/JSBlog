@@ -1,29 +1,20 @@
 import styles from "../../styles/styles.module.css";
 import React, { useEffect, useMemo, useState } from "react";
+import Category from "./Category";
 
 export default function Categories({
   categories,
   setSelectedCategory,
   toggled,
   setToggled,
+  selectedCategory,
 }) {
-  function handleCategoryChange(name) {
-    setSelectedCategory(name);
-  }
-
   return (
-    <div className={styles.categories}>
-      {categories.map((category) => (
-        <div
-          className={styles.flexItem}
-          key={category.id}
-          onClick={() => setToggled(!toggled)}
-        >
-          <h4 onClick={() => handleCategoryChange(category.name)}>
-            {category.name}
-          </h4>
-        </div>
-      ))}
-    </div>
+    <Category
+      categories={categories}
+      setSelectedCategory={setSelectedCategory}
+      setToggled={setToggled}
+      selectedCategory={selectedCategory}
+    />
   );
 }
