@@ -1,12 +1,11 @@
 import Head from "next/head";
 import styles from "../styles/styles.module.css";
 import { GraphQLClient, gql } from "graphql-request";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import BlogCard from "./components/BlogCard";
 import Categories from "./components/Categories";
 import Image from "next/image";
 import HeaderPic from "../public/matthew-henry-2Ts5HnA67k8-unsplash.jpg";
-import React from "react";
 
 const graphcms = new GraphQLClient(
   "https://api-eu-central-1.graphcms.com/v2/cl3wv4w54h7rp01z61synewo1/master"
@@ -51,9 +50,10 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts, categories }) {
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState();
+  const [selectedKey, setSelectedKey] = useState("");
 
-  console.log(posts);
+  console.log(selectedCategory);
 
   return (
     <div className={styles.container}>
@@ -76,17 +76,19 @@ export default function Home({ posts, categories }) {
         </div>
         <Categories
           categories={categories}
-          setSelectedCategory={setSelectedCategory}
           selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+          selectedKey={selectedKey}
+          setSelectedKey={setSelectedKey}
         />
-        <div className={styles.pug}>
+        {/* <div className={styles.pug}>
           <Image
             src={HeaderPic}
             alt="Picture of pug"
             width="500px"
             height="400px"
           />
-        </div>
+        </div> */}
         <div className={styles.posts}>
           {posts
             .filter((post) =>

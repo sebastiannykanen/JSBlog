@@ -8,6 +8,8 @@ export default function Categories({
   toggled,
   setToggled,
   selectedCategory,
+  selectedKey,
+  setSelectedKey,
 }) {
   return (
     <Category
@@ -15,6 +17,8 @@ export default function Categories({
       setSelectedCategory={setSelectedCategory}
       setToggled={setToggled}
       selectedCategory={selectedCategory}
+      selectedKey={selectedKey}
+      setSelectedKey={setSelectedKey}
     />
   );
 }

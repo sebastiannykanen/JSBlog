@@ -28,8 +28,8 @@ h4 {
   border-radius: 1rem;
 }
 
-h4[test="yes"] {
-  background-color: blue;
+h4[test="no"] {
+  background-color: rgb(92, 92, 100);
 }
 
 h4:hover {

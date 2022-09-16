@@ -5,22 +5,35 @@ export default function Category({
   categories,
   setSelectedCategory,
   selectedCategory,
+  selectedKey,
+  setSelectedKey,
 }) {
-  const [toggled, setToggled] = useState();
+  const [toggled, setToggled] = useState("yes");
 
-  function handleCategoryChange(name, categories) {
-    setSelectedCategory(name);
+  useEffect(() => {
+    toggled;
+  }, [selectedCategory]);
+
+  function handleCategoryChange(category) {
+    setSelectedCategory(category.name);
+    setSelectedKey(category.id);
   }
 
   return (
     <div className={styles.categories}>
-      {categories.map((category) => (
+      {categories.map((category, id) => (
         <div
           className={styles.flexItem}
           key={category.id}
-          onClick={() => setToggled(!toggled)}
+          onClick={() => {
+            if (selectedCategory === "Dogs") {
+              setToggled("yes");
+            } else {
+              setToggled("no");
+            }
+          }}
         >
-          <h4 test="yes" onClick={() => handleCategoryChange(category.name)}>
+          <h4 test={toggled} onClick={() => handleCategoryChange(category)}>
             {category.name}
           </h4>
         </div>

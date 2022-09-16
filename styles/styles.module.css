@@ -7,8 +7,8 @@
 }
 
 .pageTitle {
-  margin: 100px 0 30px 0;
-  font-size: 4rem;
+  margin: 40px 0 20px 0;
+  font-size: 3rem;
 }
 
 posts.title {
@@ -16,7 +16,7 @@ posts.title {
 }
 
 .posts {
-  padding-top: 150px;
+  padding-top: 2rem;
 }
 
 .categories {
@@ -35,7 +35,6 @@ posts.title {
 .flexItem {
   display: flex;
   font-size: 1rem;
-  margin: 15px 0;
 }
 
 .pug {
