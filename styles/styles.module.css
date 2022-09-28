@@ -2,7 +2,6 @@
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -16,7 +15,15 @@ posts.title {
 }
 
 .posts {
-  padding-top: 2rem;
+  margin-top: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 100vh;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: left;
 }
 
 .categories {
@@ -27,7 +34,7 @@ posts.title {
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(217, 217, 217);
+  background-color: rgb(243, 243, 243);
   width: 100%;
   border-bottom: 1px solid black;
 }
@@ -35,6 +42,13 @@ posts.title {
 .flexItem {
   display: flex;
   font-size: 1rem;
+  background-color: aqua;
+}
+
+.flexItem_active {
+  display: flex;
+  font-size: 1rem;
+  background-color: orange;
 }
 
 .pug {

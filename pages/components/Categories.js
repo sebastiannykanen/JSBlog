@@ -15,7 +15,6 @@ export default function Categories({
     <Category
       categories={categories}
       setSelectedCategory={setSelectedCategory}
-      setToggled={setToggled}
       selectedCategory={selectedCategory}
       selectedKey={selectedKey}
       setSelectedKey={setSelectedKey}

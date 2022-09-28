@@ -1,5 +1,6 @@
 import styles from "../../styles/styles.module.css";
 import React, { useEffect, useMemo, useState } from "react";
+import CategoryV2 from "./CategoryV2";
 
 export default function Category({
   categories,
@@ -8,35 +9,17 @@ export default function Category({
   selectedKey,
   setSelectedKey,
 }) {
-  const [toggled, setToggled] = useState("yes");
-
-  useEffect(() => {
-    toggled;
-  }, [selectedCategory]);
-
-  function handleCategoryChange(category) {
-    setSelectedCategory(category.name);
-    setSelectedKey(category.id);
-  }
-
   return (
     <div className={styles.categories}>
       {categories.map((category, id) => (
-        <div
-          className={styles.flexItem}
-          key={category.id}
-          onClick={() => {
-            if (selectedCategory === "Dogs") {
-              setToggled("yes");
-            } else {
-              setToggled("no");
-            }
-          }}
-        >
-          <h4 test={toggled} onClick={() => handleCategoryChange(category)}>
-            {category.name}
-          </h4>
-        </div>
+        <CategoryV2
+          category={category}
+          categories={categories}
+          setSelectedCategory={setSelectedCategory}
+          selectedCategory={selectedCategory}
+          selectedKey={selectedKey}
+          setSelectedKey={setSelectedKey}
+        />
       ))}
     </div>
   );

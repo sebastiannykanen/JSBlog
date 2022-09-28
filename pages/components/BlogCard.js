@@ -12,7 +12,7 @@ export default function BlogCard({
   return (
     <div>
       <Link href={"/posts/" + slug}>
-        <div>
+        <div className={styles.posts}>
           <h2>{title}</h2>
           <div
             className={styles.wallOfText}

@@ -32,7 +32,7 @@ const QUERY = gql`
         }
       }
     }
-    categories {
+    categories(orderBy: name_ASC) {
       name
       id
     }
@@ -50,8 +50,8 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts, categories }) {
-  const [selectedCategory, setSelectedCategory] = useState();
-  const [selectedKey, setSelectedKey] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [newCategory, setNewCategory] = useState("");
 
   console.log(selectedCategory);
 
@@ -71,24 +71,13 @@ export default function Home({ posts, categories }) {
       </Head>
 
       <main className={styles.mainDiv}>
-        <div className={styles.extraDiv}>
-          <h1 className={styles.pageTitle}>Jenni Strand</h1>
-        </div>
+        <h1 className={styles.pageTitle}>Jenni Strand</h1>
         <Categories
           categories={categories}
+          key={categories.id}
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
-          selectedKey={selectedKey}
-          setSelectedKey={setSelectedKey}
         />
-        {/* <div className={styles.pug}>
-          <Image
-            src={HeaderPic}
-            alt="Picture of pug"
-            width="500px"
-            height="400px"
-          />
-        </div> */}
         <div className={styles.posts}>
           {posts
             .filter((post) =>
