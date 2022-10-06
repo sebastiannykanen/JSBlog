@@ -39,16 +39,17 @@ posts.title {
   border-bottom: 1px solid black;
 }
 
-.flexItem {
-  display: flex;
-  font-size: 1rem;
-  background-color: aqua;
-}
-
 .flexItem_active {
   display: flex;
   font-size: 1rem;
-  background-color: orange;
+  background-color: rgb(101, 101, 101);
+  color: white;
+}
+
+.flexItem {
+  display: flex;
+  font-size: 1rem;
+  background-color: rgb(243, 243, 243);
 }
 
 .pug {

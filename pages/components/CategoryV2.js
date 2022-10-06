@@ -9,21 +9,22 @@ export default function CategoryV2({
   selectedKey,
   setSelectedKey,
 }) {
-  const [active, setActive] = useState(true);
-
-  console.log(active);
-
   function handleCategoryChange(category) {
-    setSelectedCategory(category.name);
-    setActive(!active);
+    if (category.name === selectedCategory) {
+      setSelectedCategory("");
+    } else {
+      setSelectedCategory(category.name);
+    }
   }
   return (
     <div key={category.id}>
       <h4
         onClick={() => handleCategoryChange(category)}
-        className={`${styles.flexItem} ${
-          active ? styles.flexItem_active : ""
-        } `}
+        className={
+          selectedCategory === category.name
+            ? styles.flexItem_active
+            : styles.flexItem
+        }
       >
         {category.name}
       </h4>

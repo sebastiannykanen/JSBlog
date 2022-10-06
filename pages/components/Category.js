@@ -11,7 +11,7 @@ export default function Category({
 }) {
   return (
     <div className={styles.categories}>
-      {categories.map((category, id) => (
+      {categories.map((category) => (
         <CategoryV2
           category={category}
           categories={categories}

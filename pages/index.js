@@ -50,10 +50,17 @@ export async function getStaticProps() {
 }
 
 export default function Home({ posts, categories }) {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [newCategory, setNewCategory] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
 
-  console.log(selectedCategory);
+  // const selectedCategories = [];
+
+  // const filteredCategories = [...selectedCategories].filter(
+  //   (selected) => selected !== category
+  // );
+
+  // setSelectedCategories(filteredCategories);
+
+  // setSelectedCategories([...selectedCategories, category]);
 
   return (
     <div className={styles.container}>
@@ -80,11 +87,15 @@ export default function Home({ posts, categories }) {
         />
         <div className={styles.posts}>
           {posts
-            .filter((post) =>
-              post.categories
-                .map((category) => category.name)
-                .includes(selectedCategory)
-            )
+            .filter((post) => {
+              if (selectedCategory === "") {
+                return true;
+              } else {
+                return post.categories
+                  .map((category) => category.name)
+                  .includes(selectedCategory);
+              }
+            })
             .map((post) => (
               <BlogCard
                 title={post.title}
