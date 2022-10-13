@@ -1,12 +1,9 @@
-import styles from "../../styles/styles.module.css";
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import Category from "./Category";
 
 export default function Categories({
   categories,
   setSelectedCategory,
-  toggled,
-  setToggled,
   selectedCategory,
   selectedKey,
   setSelectedKey,

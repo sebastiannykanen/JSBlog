@@ -5,15 +5,6 @@
   align-items: center;
 }
 
-.pageTitle {
-  margin: 40px 0 20px 0;
-  font-size: 3rem;
-}
-
-posts.title {
-  font-size: 5rem;
-}
-
 .posts {
   margin-top: 5px;
   padding-left: 30px;
@@ -30,13 +21,18 @@ posts.title {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   position: sticky;
   top: 0;
   z-index: 1;
   background-color: rgb(243, 243, 243);
   width: 100%;
   border-bottom: 1px solid black;
+  padding: 5px;
+}
+
+.categories h4 {
+  font-size: 1.2rem;
 }
 
 .flexItem_active {
@@ -50,8 +46,4 @@ posts.title {
   display: flex;
   font-size: 1rem;
   background-color: rgb(243, 243, 243);
-}
-
-.pug {
-  margin-top: 40px;
 }

@@ -1,11 +1,10 @@
 import Head from "next/head";
 import styles from "../styles/styles.module.css";
 import { GraphQLClient, gql } from "graphql-request";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import BlogCard from "./components/BlogCard";
 import Categories from "./components/Categories";
-import Image from "next/image";
-import HeaderPic from "../public/matthew-henry-2Ts5HnA67k8-unsplash.jpg";
+import Header from "./components/Header";
 
 const graphcms = new GraphQLClient(
   "https://api-eu-central-1.graphcms.com/v2/cl3wv4w54h7rp01z61synewo1/master"
@@ -52,16 +51,6 @@ export async function getStaticProps() {
 export default function Home({ posts, categories }) {
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  // const selectedCategories = [];
-
-  // const filteredCategories = [...selectedCategories].filter(
-  //   (selected) => selected !== category
-  // );
-
-  // setSelectedCategories(filteredCategories);
-
-  // setSelectedCategories([...selectedCategories, category]);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -78,7 +67,7 @@ export default function Home({ posts, categories }) {
       </Head>
 
       <main className={styles.mainDiv}>
-        <h1 className={styles.pageTitle}>Jenni Strand</h1>
+        <Header />
         <Categories
           categories={categories}
           key={categories.id}

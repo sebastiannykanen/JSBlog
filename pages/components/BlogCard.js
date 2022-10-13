@@ -1,14 +1,7 @@
 import Link from "next/link";
 import styles from "../../styles/BlogCard.module.css";
 
-export default function BlogCard({
-  title,
-  author,
-  datePublished,
-  slug,
-  content,
-  categories,
-}) {
+export default function BlogCard({ title, author, slug, content }) {
   return (
     <div>
       <Link href={"/posts/" + slug}>

@@ -1,13 +1,10 @@
 import styles from "../../styles/styles.module.css";
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 
 export default function CategoryV2({
-  categories,
   category,
   setSelectedCategory,
   selectedCategory,
-  selectedKey,
-  setSelectedKey,
 }) {
   function handleCategoryChange(category) {
     if (category.name === selectedCategory) {

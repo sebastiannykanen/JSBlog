@@ -1,5 +1,5 @@
 import styles from "../../styles/styles.module.css";
-import React, { useEffect, useMemo, useState } from "react";
+import React from "react";
 import CategoryV2 from "./CategoryV2";
 
 export default function Category({

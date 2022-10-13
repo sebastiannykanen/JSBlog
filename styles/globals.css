@@ -25,8 +25,7 @@ h2 {
 }
 
 h4 {
-  padding: 1rem;
-  border-radius: 1rem;
+  font-size: 4rem;
 }
 
 h4[test="no"] {
