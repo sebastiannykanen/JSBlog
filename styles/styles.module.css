@@ -5,11 +5,10 @@
 }
 
 .posts {
-  margin-top: 5px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 0.12rem;
-  height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 30px;
   width: 600px;
   display: flex;
   flex-direction: column;
