@@ -1,7 +1,7 @@
-import styles from "../../styles/styles.module.css";
+import styles from "../styles/styles.module.css";
 import React from "react";
 
-export default function CategoryV2({
+export default function Category({
   category,
   setSelectedCategory,
   selectedCategory,

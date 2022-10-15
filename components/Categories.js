@@ -1,24 +1,21 @@
-import styles from "../../styles/styles.module.css";
+import styles from "../styles/styles.module.css";
 import React from "react";
-import CategoryV2 from "./CategoryV2";
+import Category from "./Category";
 
-export default function Category({
+export default function Categories({
   categories,
   setSelectedCategory,
   selectedCategory,
-  selectedKey,
-  setSelectedKey,
 }) {
   return (
     <div className={styles.categories}>
       {categories.map((category) => (
-        <CategoryV2
+        <Category
           category={category}
           categories={categories}
           setSelectedCategory={setSelectedCategory}
           selectedCategory={selectedCategory}
-          selectedKey={selectedKey}
-          setSelectedKey={setSelectedKey}
+          key={categories.id}
         />
       ))}
     </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../styles/BlogCard.module.css";
+import styles from "../styles/styles.module.css";
 
 export default function BlogCard({ title, author, slug, content }) {
   return (
