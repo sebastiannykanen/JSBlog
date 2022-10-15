@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import styles from "../../styles/styles.module.css";
+import styles from "../styles/styles.module.css";
 import { GraphQLClient, gql } from "graphql-request";
-import Header from "../../components/Header";
+import Header from "../components/Header";
 import Head from "next/head";
 import Link from "next/link";
 

@@ -11,7 +11,7 @@ export default function Header({}) {
         width={1920}
         height={550}
         placeholder="blur"
-        quality={50}
+        quality={100}
       />
     </div>
   );

@@ -4,7 +4,7 @@ import styles from "../styles/styles.module.css";
 export default function BlogCard({ title, author, slug, content }) {
   return (
     <div>
-      <Link href={"/posts/" + slug}>
+      <Link href={"/" + slug}>
         <div className={styles.posts}>
           <h2>{title}</h2>
           <div
