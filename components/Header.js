@@ -1,15 +1,16 @@
 import React from "react";
 import Image from "next/image";
-import HeaderPic from "../public/JSHeader3.png";
+import HeaderPic from "../public/JSHeader5.png";
+import styles from "../styles/styles.module.css";
 
 export default function Header({}) {
   return (
-    <div>
+    <div className={styles.headerPic}>
       <Image
         src={HeaderPic}
-        alt="Picture of the author"
-        width={1920}
-        height={550}
+        alt="Header picture for blog, bulldog on picture and Jenni Strand as text"
+        width={700}
+        height={200}
         placeholder="blur"
         quality={100}
       />
