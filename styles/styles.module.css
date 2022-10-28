@@ -12,13 +12,18 @@
 .posts {
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 600px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   justify-content: top;
   align-items: left;
+  border: 1px solid black;
+  background: linear-gradient(45deg, white, var(--background) 100%);
 }
 
 .categories {
@@ -29,7 +34,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   border-bottom: 1px solid black;
   padding-top: 15px;
@@ -42,7 +47,7 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   border-bottom: 1px solid black;
   padding-top: 15px;
@@ -55,7 +60,7 @@
 .flexItem {
   display: inline-block;
   position: relative;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(255, 255, 255);
 }
 
 .flexItem:hover {

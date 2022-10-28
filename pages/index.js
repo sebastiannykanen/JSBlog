@@ -69,7 +69,7 @@ export default function Home({ posts, categories }) {
           selectedCategory={selectedCategory}
           setSelectedCategory={setSelectedCategory}
         />
-        <div className={styles.posts}>
+        <div className={styles.postContainer}>
           {posts
             .filter((post) => {
               if (selectedCategory === "") {
