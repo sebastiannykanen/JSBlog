@@ -18,10 +18,7 @@
   padding-bottom: 15px;
   margin-top: 15px;
   margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-  align-items: left;
+  width: 600px;
   border: 1px solid black;
   background: linear-gradient(45deg, white, var(--background) 100%);
 }
