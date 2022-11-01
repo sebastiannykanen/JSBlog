@@ -62,7 +62,10 @@ export default function Home({ posts, categories }) {
       </Head>
 
       <main className={styles.mainDiv}>
-        <Header />
+        <Header
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setSelectedCategory}
+        />
         <Categories
           categories={categories}
           key={categories.id}

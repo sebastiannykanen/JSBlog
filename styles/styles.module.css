@@ -23,6 +23,14 @@
   background: linear-gradient(45deg, white, var(--background) 100%);
 }
 
+.posts h5 {
+  padding-top: 20px;
+}
+
+.posts:hover {
+  cursor: pointer;
+}
+
 .categories {
   display: flex;
   flex-direction: row;
