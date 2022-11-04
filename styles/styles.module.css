@@ -19,9 +19,9 @@
   margin-top: 15px;
   margin-bottom: 15px;
   width: 600px;
-  border: 1px solid black;
+  border: 1px solid var(--darkgray);
   background: white;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .posts h5 {
@@ -40,10 +40,9 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background);
   width: 100%;
-  border-bottom: 1px solid black;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -53,56 +52,55 @@
   position: sticky;
   top: 0;
   z-index: 1;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background);
   width: 100%;
-  border-bottom: 1px solid black;
-  padding-top: 15px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 .goBack h4:hover {
   cursor: pointer;
 }
 
-.flexItem {
+.categoryItem {
   display: inline-block;
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background);
 }
 
-.flexItem:hover {
+.categoryItem:hover {
   cursor: pointer;
 }
 
-.flexItem::after {
+.categoryItem::after {
   content: "";
   position: absolute;
-  background-color: red;
-  height: 3px;
-  bottom: -10px;
+  background-color: var(--darkgray);
+  height: 2px;
+  bottom: -5px;
   left: 0px;
   width: 0%;
   transition: 0.2s ease-out;
 }
 
-.flexItem:hover::after {
+.categoryItem:hover::after {
   width: 100%;
 }
 
-.flexItem_active {
+.categoryItem_active {
   display: inline-block;
   position: relative;
 }
 
-.flexItem_active:hover {
+.categoryItem_active:hover {
   cursor: pointer;
 }
 
-.flexItem_active::after {
+.categoryItem_active::after {
   content: "";
   position: absolute;
-  background-color: red;
-  height: 3px;
-  bottom: -10px;
+  background-color: var(--darkgray);
+  height: 2px;
+  bottom: -5px;
   left: 0px;
   width: 100%;
 }

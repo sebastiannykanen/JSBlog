@@ -19,8 +19,8 @@ export default function Category({
         onClick={() => handleCategoryChange(category)}
         className={
           selectedCategory === category.name
-            ? styles.flexItem_active
-            : styles.flexItem
+            ? styles.categoryItem_active
+            : styles.categoryItem
         }
       >
         {category.name}
