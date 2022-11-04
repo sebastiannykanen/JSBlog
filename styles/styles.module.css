@@ -20,7 +20,8 @@
   margin-bottom: 15px;
   width: 600px;
   border: 1px solid black;
-  background: linear-gradient(45deg, white, var(--background) 100%);
+  background: white;
+  border-radius: 10px;
 }
 
 .posts h5 {

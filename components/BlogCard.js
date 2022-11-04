@@ -17,7 +17,14 @@ export default function BlogCard({
             className={styles.wallOfText}
             dangerouslySetInnerHTML={{ __html: content.html }}
           ></div> */}
-          <h5>{datePublished}</h5>
+          {/* <h5>{datePublished}</h5> */}
+          <h5>
+            {new Date(`${datePublished}`).toLocaleDateString("en-us", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </h5>
         </div>
       </Link>
     </div>
