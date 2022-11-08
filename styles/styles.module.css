@@ -9,6 +9,11 @@
   padding-bottom: 30px;
 }
 
+.headShot {
+  border-radius: 50%;
+  height: 100px;
+}
+
 .posts {
   padding-left: 30px;
   padding-right: 30px;
