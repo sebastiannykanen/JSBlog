@@ -11,6 +11,10 @@ body {
   letter-spacing: 1px;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   width: 100%;
 }

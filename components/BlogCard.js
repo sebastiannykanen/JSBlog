@@ -9,7 +9,7 @@ export default function BlogCard({
   datePublished,
 }) {
   return (
-    <Link href={"/" + slug}>
+    <Link href={"/" + slug} className={styles.hello}>
       <div className={styles.posts}>
         <h2>{title}</h2>
         {/* <div
