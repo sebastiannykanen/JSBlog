@@ -3,20 +3,17 @@ import styles from "../styles/styles.module.css";
 
 export default function BlogCard({
   title,
-  author,
   slug,
-  content,
   datePublished,
+  picture,
+  description,
 }) {
   return (
     <Link href={"/" + slug} className={styles.hello}>
       <div className={styles.posts}>
         <h2>{title}</h2>
-        {/* <div
-            className={styles.wallOfText}
-            dangerouslySetInnerHTML={{ __html: content.html }}
-          ></div> */}
-        {/* <h5>{datePublished}</h5> */}
+        <img src={picture.url} />
+        <p dangerouslySetInnerHTML={{ __html: description.html }}></p>
         <h5>
           {new Date(`${datePublished}`).toLocaleDateString("en-us", {
             year: "numeric",

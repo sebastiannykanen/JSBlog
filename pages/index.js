@@ -18,6 +18,12 @@ const QUERY = gql`
       id
       datePublished
       slug
+      picture {
+        url
+      }
+      description {
+        html
+      }
       content {
         html
       }

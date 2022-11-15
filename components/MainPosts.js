@@ -1,7 +1,4 @@
-import Link from "next/link";
 import styles from "../styles/styles.module.css";
-import Image from "next/image";
-import HeadShot from "../public/3119.webp";
 import BlogCard from "./BlogCard";
 
 export default function MainPosts({ selectedCategory, posts }) {
@@ -23,6 +20,8 @@ export default function MainPosts({ selectedCategory, posts }) {
             key={post.id}
             author={post.author}
             datePublished={post.datePublished}
+            description={post.description}
+            picture={post.picture}
             slug={post.slug}
             content={post.content}
             categories={post.categories}
