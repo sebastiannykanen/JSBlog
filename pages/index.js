@@ -13,7 +13,7 @@ const graphcms = new GraphQLClient(
 
 const QUERY = gql`
   {
-    posts(orderBy: createdAt_DESC) {
+    posts(orderBy: datePublished_DESC) {
       title
       id
       datePublished
@@ -80,6 +80,7 @@ export default function Home({ posts, categories }) {
         />
       </div>
       <div className={styles.mainDiv}>
+        <></>
         <div className={styles.postsContainer}>
           <MainPosts
             categories={categories}

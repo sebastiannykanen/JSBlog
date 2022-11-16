@@ -9,19 +9,20 @@ export default function BlogCard({
   description,
 }) {
   return (
-    <Link href={"/" + slug} className={styles.hello}>
-      <div className={styles.posts}>
-        <h2>{title}</h2>
-        <img src={picture.url} />
-        <p dangerouslySetInnerHTML={{ __html: description.html }}></p>
-        <h5>
-          {new Date(`${datePublished}`).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
-        </h5>
-      </div>
-    </Link>
+    <div className={styles.posts}>
+      <h2>{title}</h2>
+      <h5>
+        {new Date(`${datePublished}`).toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </h5>
+      <img src={picture.url} className={styles.picture} />
+      <h5 dangerouslySetInnerHTML={{ __html: description.html }}></h5>
+      <Link href={"/" + slug} className={styles.hello}>
+        <button className={styles.readPostButton}>Read Post</button>
+      </Link>
+    </div>
   );
 }

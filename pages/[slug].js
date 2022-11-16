@@ -77,7 +77,7 @@ export default function BlogPost({ post }) {
             <h4>⏎ Back to main page</h4>
           </Link>
         </div>
-        <div className={styles.posts}>
+        <div className={styles.post}>
           <h2 className={styles.wallOfText}>{post.title}</h2>
           <p dangerouslySetInnerHTML={{ __html: post.content.html }}></p>
         </div>

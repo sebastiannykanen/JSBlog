@@ -11,12 +11,14 @@ export default function Sidebar() {
           src={HeadShot}
           alt="Header picture for blog, bulldog on picture and Jenni Strand as text"
           className={styles.headShot}
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           placeholder="blur"
           quality={100}
         />
-        <h4>My name is Jenni Strand</h4>
+        <h5>
+          Welcome to my blog. <br></br>My name is Jenni.
+        </h5>
       </div>
     </div>
   );
