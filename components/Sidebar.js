@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../styles/styles.module.css";
 import Image from "next/image";
-import HeadShot from "../public/3119.webp";
+import HeadShot from "../public/jenni.jpg";
 
 export default function Sidebar() {
   return (
