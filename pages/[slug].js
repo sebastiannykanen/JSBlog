@@ -74,7 +74,7 @@ export default function BlogPost({ post }) {
         <Header />
         <div className={styles.goBack}>
           <Link href="/">
-            <h4>⏎ Back to main page</h4>
+            <h4>⏎ Back</h4>
           </Link>
         </div>
         <div className={styles.post}>
