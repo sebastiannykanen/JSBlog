@@ -3,4 +3,15 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
+module.exports = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**media.graphassets.com**",
+      },
+    ],
+  },
+};
+
 module.exports = nextConfig;

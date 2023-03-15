@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/styles.module.css";
 
@@ -18,7 +19,12 @@ export default function BlogCard({
           day: "numeric",
         })}
       </h5>
-      <img src={picture.url} className={styles.picture} />
+      <Image
+        src={picture.url}
+        alt=""
+        className={styles.picture}
+        layout="fill"
+      />
       <h5 dangerouslySetInnerHTML={{ __html: description.html }}></h5>
       <Link href={"/" + slug} className={styles.hello}>
         <button className={styles.readPostButton}>Read Post</button>

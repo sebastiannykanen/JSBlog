@@ -1,22 +1,35 @@
 import styles from "../styles/styles.module.css";
 import React from "react";
-import Category from "./Category";
+// import Category from "./Category";
 
 export default function Categories({
   categories,
   setSelectedCategory,
   selectedCategory,
 }) {
+  function handleCategoryChange(category) {
+    if (category.name === selectedCategory) {
+      setSelectedCategory("");
+    } else {
+      setSelectedCategory(category.name);
+    }
+  }
+
   return (
     <div className={styles.categories}>
       {categories.map((category) => (
-        <Category
-          category={category}
-          categories={categories}
-          setSelectedCategory={setSelectedCategory}
-          selectedCategory={selectedCategory}
-          key={categories.id}
-        />
+        <div key={category.id}>
+          <h4
+            onClick={() => handleCategoryChange(category)}
+            className={
+              selectedCategory === category.name
+                ? styles.categoryItem_active
+                : styles.categoryItem
+            }
+          >
+            {category.name}
+          </h4>
+        </div>
       ))}
     </div>
   );

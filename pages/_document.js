@@ -11,6 +11,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap"
             rel="stylesheet"
           />
+          <link rel="shortcut icon" href="#"></link>
         </Head>
         <body>
           <Main />

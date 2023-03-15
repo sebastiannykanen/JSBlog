@@ -45,6 +45,8 @@ const QUERY = gql`
   }
 `;
 
+// Getting data from headless CMS hygraph
+
 export async function getStaticProps() {
   const { posts, categories } = await graphcms.request(QUERY);
   return {
